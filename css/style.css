@@ -1,0 +1,13 @@
+:root{--bg:#1b1a2e;--pn:#26243d;--tx:#f1ecf5;--mu:#a9a3bd;--ac:#7fd0e8;--wr:#e8935f;--ok:#8fd694;--bd:#3a3758;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#f3eef6;--pn:#fff;--tx:#221f33;--mu:#625c78;--ac:#0b6a8a;--wr:#b4521f;--ok:#2d7a37;--bd:#d6cfe2}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 "Trebuchet MS",ui-rounded,system-ui,sans-serif}
+main{max-width:980px;margin:auto;padding:14px}h1{font-size:1.5rem;margin:.2em 0}h2{font-size:1.1rem;margin:.4em 0}
+.sub,small{color:var(--mu)}.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--pn);border:1px solid var(--bd);border-radius:10px;padding:10px}
+button,select{font:inherit;color:var(--tx);background:var(--pn);border:1px solid var(--ac);border-radius:8px;padding:6px 12px;cursor:pointer;min-height:40px}
+button:hover{background:var(--ac);color:#10101c}button:disabled{opacity:.4}button:focus-visible{outline:3px solid var(--wr)}
+button.go,button.on{background:var(--ac);color:#10101c;font-weight:700}.sm{min-height:0;padding:0 7px;font-size:.78rem}
+.row{display:flex;justify-content:space-between;gap:6px;align-items:center;margin:3px 0}.bar{height:9px;background:var(--bd);border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok)}
+.R{color:var(--ok)}.D{color:var(--ac)}.A{color:var(--wr)}.alert{border-color:var(--wr)}canvas{width:100%;height:150px;display:block}
+#log{max-height:130px;overflow:auto;font-size:.85rem;color:var(--mu)}table{border-collapse:collapse;font-size:.8rem}td{padding:1px 8px 1px 0}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:12px;z-index:9}.ov>div{max-width:780px;max-height:90vh;overflow:auto;background:var(--bg);border:1px solid var(--ac);border-radius:12px;padding:14px}.tg{font-size:.72rem;font-weight:700;border:1px solid currentColor;border-radius:5px;padding:0 6px}table.cmp td,table.cmp th{border-bottom:1px solid var(--bd);padding:4px 10px 4px 0;text-align:left;font-size:.9rem}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
