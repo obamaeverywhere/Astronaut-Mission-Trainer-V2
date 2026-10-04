@@ -40,27 +40,3 @@ tools/bundle.py        builds one self-contained HTML file:  python3 tools/bundl
 tools/split.py         one-time script used to split the original single-file prototype
 ```
 **Adding a mission:** add an object to `LEVELS` in `js/levels.js` (site, sols, budget, equipment `eq`, hazards `hz`, scheduled hazards `force`, objective, optional `win` test, optional goals). No simulation code needs to change.
-
-## Host it on GitHub Pages (whole project)
-1. Create a new **public** repository on GitHub (for example `outpost-zero`).
-2. Upload the project so that `index.html` is at the **top level** of the repo (not inside another folder). With git:
-   ```bash
-   cd outpost-zero
-   git init -b main
-   git add .
-   git commit -m "Outpost Zero"
-   git remote add origin https://github.com/YOUR-USERNAME/outpost-zero.git
-   git push -u origin main
-   ```
-   (On the website: Add file > Upload files, drag in the *contents* of the folder, including the `css`, `js` and `vendor` folders, then Commit.)
-3. Go to **Settings > Pages**. Under "Build and deployment" choose **Deploy from a branch**, branch **main**, folder **/ (root)**, then **Save**.
-4. After 1 to 2 minutes the game is live at `https://YOUR-USERNAME.github.io/outpost-zero/`.
-5. To update, commit and push; hard-refresh (Ctrl/Cmd+Shift+R) if you see the old version.
-
-Alternatives: drag the folder onto https://app.netlify.com/drop, or use any static host. Everything is static files; no server code, API keys or database.
-
-## Data honesty
-The game labels every input REAL, DERIVED, MODELED or ABSTRACTION (see the NASA data panel in the game). Only the Gale Crater radiation rate (Curiosity RAD) and the SWIM ice findings are taken from NASA results; source links are marked "to be verified" until confirmed. Most other numbers are gameplay values, not real mission values. Official challenge data (released Oct 28) is not included yet.
-
-## Status
-Done: mission briefing, level campaign, site comparison, NASA data panel, trade-off design screen, 3D view. Not done yet: prediction questions, Mission Control event choices, clickable 3D objects, dependency graph, engineering lab with run comparison, demo mode, accessibility audit.
